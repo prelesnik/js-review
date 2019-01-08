@@ -8,6 +8,7 @@
 intro();
 fizzBuzz();
 countBs("Bunny");
+countChar("Mickey Mouse", "M");
 
 
 //number 1
@@ -57,4 +58,20 @@ function countBs(string)
     }
 
     console.log("Capital 'B' occurrences in " + string + "= " + counter);
+}
+
+//number 4
+function countChar(string, letter)
+{
+    let counter = 0;
+
+    for (let i = 0; i < string.length; i++)
+    {
+        if (string.charAt(i) == letter)
+        {
+            counter += 1;
+        }
+    }
+
+    console.log("Number of '" + letter + "' occurrences in " + string + "= " + counter);
 }
