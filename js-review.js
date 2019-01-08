@@ -3,12 +3,18 @@
 // js-review.js
 
 
+
 //function calls
+intro();
 fizzBuzz();
+countBs("Bunny");
 
 
 //number 1
-console.log("Introduction to JavaScript");
+function intro()
+{
+    console.log("Introduction to JavaScript");
+}
 
 //number 2
 function fizzBuzz()
@@ -37,3 +43,18 @@ function fizzBuzz()
     }
 }
 
+//number 3
+function countBs(string)
+{
+    let counter = 0;
+
+    for (let i = 0; i < string.length; i++)
+    {
+        if (string.charAt(i) == "B")
+        {
+            counter += 1;
+        }
+    }
+
+    console.log("Capital 'B' occurrences in " + string + "= " + counter);
+}
