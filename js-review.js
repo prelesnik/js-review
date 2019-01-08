@@ -47,6 +47,7 @@ function fizzBuzz()
 //number 3
 function countBs(string)
 {
+    /*
     let counter = 0;
 
     for (let i = 0; i < string.length; i++)
@@ -58,6 +59,10 @@ function countBs(string)
     }
 
     console.log("Capital 'B' occurrences in " + string + "= " + counter);
+    */
+
+    //number 5
+    countChar("Bunny", "B");
 }
 
 //number 4
@@ -73,5 +78,5 @@ function countChar(string, letter)
         }
     }
 
-    console.log("Number of '" + letter + "' occurrences in " + string + "= " + counter);
+    console.log("Number of '" + letter + "' occurrences in " + string + ": " + counter);
 }
