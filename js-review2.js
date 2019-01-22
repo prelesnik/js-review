@@ -27,6 +27,12 @@ console.log(objEquals(obj, {here: {isnt: "an"}, object: 2}));
 console.log(objEquals(obj, {here: {is: "an", deep: {poop: null, value: -1}}, object: 2}));
 // → false
 
+var arr = [[1, 2, 3], [4, 5], [6]];
+console.log(flatten(arr));
+// → [1, 2, 3, 4, 5, 6]
+
+
+
 //test to make sure the keys are what I expected
 //let validKeys = Object.keys(obj);
 //console.log(validKeys);
@@ -64,9 +70,16 @@ function objEquals(object1, object2)
     return true;
 }
 
-
-
-function flatten()
+function flatten(array)
 {
+    //define the new array to hold all the values
+    let flattened = [];
 
+    array.reduce(function(accumulator, currentValue){
+        //reassign the values to the new array
+        flattened = flattened.concat(currentValue);
+    }, 0);
+
+    //return the new array
+    return flattened;
 }
